@@ -1,0 +1,270 @@
+Relatório Trabalho - Tópicos --- Júlio César Teixeira dos Santos RA:18472 - 15/09/2018
+
+Comandos utilizados
+
+aluno@info09 MINGW64 ~
+$ mkdir site            							<---- Criado repositório(pasta) site
+_____________________________________________________________________________________________________________________________________________________
+
+aluno@info09 MINGW64 ~
+$ cd site               							<---- Acesso ao repositório(pasta) site          
+_____________________________________________________________________________________________________________________________________________________
+
+aluno@info09 MINGW64 ~/site
+$ git init              							<---- Inicializado o repositório Git na pasta site
+Initialized empty Git repository in C:/Users/aluno/site/.git/
+_____________________________________________________________________________________________________________________________________________________
+
+aluno@info09 MINGW64 ~/site (master)
+$ git config --global user.name "Júlio César"					<---- Configurado nome do usuário do repositório Git da pasta site
+_____________________________________________________________________________________________________________________________________________________
+
+aluno@info09 MINGW64 ~/site (master)
+$ git config --global user.email "julio_splinter@outlook.com"			<---- Configurado email do usuário do repositório Git da pasta site
+_____________________________________________________________________________________________________________________________________________________
+
+aluno@info09 MINGW64 ~/site (master)
+$ git status									<---- Verificando situação dos arquivos da pasta site
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        cadastro.html
+        fotos.html
+        historia.html
+        imagens/
+        index.html
+        sobre.html
+        style_2.css
+        titulos.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+_____________________________________________________________________________________________________________________________________________________
+
+aluno@info09 MINGW64 ~/site (master)
+$ git add .									<---- Enviando todos os arquivos e pastas para área de Stage
+_____________________________________________________________________________________________________________________________________________________
+
+aluno@info09 MINGW64 ~/site (master)
+$ git commit -am "Adicionando site"						<---- Gravando arquivos e pastas no repositório site
+[master (root-commit) ce26ef4] Adicionando site
+ 12 files changed, 588 insertions(+)
+ create mode 100644 cadastro.html
+ create mode 100644 fotos.html
+ create mode 100644 historia.html
+ create mode 100644 imagens/RocketLeague.jpg
+ create mode 100644 imagens/Rocket_League_Logo.png
+ create mode 100644 imagens/favicon.ico
+ create mode 100644 imagens/logo.png
+ create mode 100644 imagens/titulos.jpg
+ create mode 100644 index.html
+ create mode 100644 sobre.html
+ create mode 100644 style_2.css
+ create mode 100644 titulos.html
+_____________________________________________________________________________________________________________________________________________________
+
+aluno@info09 MINGW64 ~/site (master)
+$ git log									<---- Verificando o histórico das informações gravadas
+commit ce26ef469cda3bef757f015dfb9e3065e2cb14b4 (HEAD -> master)
+Author: Júlio César <julio_splinter@outlook.com>
+Date:   Fri Sep 14 22:15:54 2018 -0300
+
+    Adicionando site
+_____________________________________________________________________________________________________________________________________________________
+
+aluno@info09 MINGW64 ~/site (master)
+$ git remote add origin https://github.com/j086795/site.git			<---- Apontando para o repositório site no Github
+_____________________________________________________________________________________________________________________________________________________
+
+aluno@info09 MINGW64 ~/site (master)
+$ git push origin master							<---- Enviando informações para o repositório site no Github
+Username for 'https://github.com': j086795
+Counting objects: 15, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.00 MiB | 272.00 KiB/s, done.
+Total 15 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/j086795/site/pull/new/master
+remote:
+To https://github.com/j086795/site.git
+ * [new branch]      master -> master
+_____________________________________________________________________________________________________________________________________________________
+
+julio@JasonBrody MINGW64 ~/site (master)
+$ git clone https://github.com/j086795/site.git					<---- Copiando o repositório site do Github
+Cloning into 'site'...
+remote: Counting objects: 27, done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 27 (delta 9), reused 25 (delta 7), pack-reused 0
+Unpacking objects: 100% (27/27), done.
+_____________________________________________________________________________________________________________________________________________________
+
+julio@JasonBrody MINGW64 ~/site/site (master)
+$ git status									<---- Verificando situação dos arquivos da pasta site
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   sobre.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        imagens/julio.jpg
+        imagens/photothumb.db
+
+no changes added to commit (use "git add" and/or "git commit -a")
+_____________________________________________________________________________________________________________________________________________________
+
+julio@JasonBrody MINGW64 ~/site/site (master)
+$ git add .									<---- Enviando todos os arquivos e pastas para área de Stage
+_____________________________________________________________________________________________________________________________________________________
+
+julio@JasonBrody MINGW64 ~/site/site (master)
+$ git status									<---- Verificando situação dos arquivos da pasta site
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   imagens/julio.jpg
+        new file:   imagens/photothumb.db
+        modified:   sobre.html
+_____________________________________________________________________________________________________________________________________________________
+
+julio@JasonBrody MINGW64 ~/site/site (master)
+$ git commit -am "Informações do colaborador Júlio César na página Sobre"	<---- Gravando arquivos e pastas no repositório site
+[master 1476a4a] Informações do colaborador Júlio César na página Sobre
+ 3 files changed, 12 insertions(+), 1 deletion(-)
+ create mode 100644 imagens/julio.jpg
+ create mode 100644 imagens/photothumb.db
+_____________________________________________________________________________________________________________________________________________________
+
+julio@JasonBrody MINGW64 ~/site/site (master)
+$ git push origin master							<---- Enviando informações para o repositório site no Github
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 126.32 KiB | 10.53 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/j086795/site.git
+   fe44c95..1476a4a  master -> master
+_____________________________________________________________________________________________________________________________________________________
+
+julio@JasonBrody MINGW64 ~/site/site (master)
+$ git log									<---- Verificando o histórico das informações gravadas
+commit 1476a4ad6387825c8d25e8051b7d66cf3a4ee8f0 (HEAD -> master, origin/master, origin/HEAD)
+Author: Júlio César <julio_splinter@outlook.com>
+Date:   Sat Sep 15 18:24:24 2018 -0300
+
+    Informações do colaborador Júlio César na página Sobre
+
+commit fe44c958671380925ee9dfb681c1d13cded11be2
+Author: Alexandre Fernandes <alexandre_201@hotmail.com>
+Date:   Sat Sep 15 17:32:46 2018 -0300
+
+    Adicionado arquivo de Relatorio com comandos GIT utilizados
+
+commit 29b951dafdbcc0e925dc350ffd8e81c25d68a058
+Author: Alexandre Fernandes <alexandre_201@hotmail.com>
+Date:   Sat Sep 15 17:26:15 2018 -0300
+
+    Adicionado shortbio na página Sobre, alterado css do conteúdo relacionado e adicionado foto no arquivos de imagens.
+
+commit ce975a795b21eaa1b86385326e3418510ea1e7d7
+Author: Júlio César <julio_splinter@outlook.com>
+Date:   Fri Sep 14 22:38:06 2018 -0300
+
+    Alterado plano de fundo da página Equipe
+
+commit ce26ef469cda3bef757f015dfb9e3065e2cb14b4
+Author: Júlio César <julio_splinter@outlook.com>
+Date:   Fri Sep 14 22:15:54 2018 -0300
+
+    Adicionando site
+
+_____________________________________________________________________________________________________________________________________________________
+
+julio@JasonBrody MINGW64 ~/site/site (master)					
+$ git revert --no-edit d0463130db293fb73aed4a150d8db3bcfc795ad9			<---- Revertendo o plano de funda da página Equipe
+[master 5c33256] Revert "Alterado background-image da aba Sobre"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+_____________________________________________________________________________________________________________________________________________________
+
+julio@JasonBrody MINGW64 ~/site/site (master)
+$ git push origin master							<---- Enviando informações para o repositório site no Github
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 444 bytes | 222.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/j086795/site.git
+   d046313..5c33256  master -> master
+
+_____________________________________________________________________________________________________________________________________________________
+
+julio@JasonBrody MINGW64 ~/site/site (master)
+$ git log									<---- Verificando o histórico das informações gravadas
+commit 5c33256d12f375970507e8e919d0bd83f672c83a (HEAD -> master, origin/master, origin/HEAD)
+Author: Júlio César <julio_splinter@outlook.com>
+Date:   Wed Sep 19 16:51:36 2018 -0300
+
+    Revert "Alterado background-image da aba Sobre"
+
+    This reverts commit d0463130db293fb73aed4a150d8db3bcfc795ad9.
+
+commit d0463130db293fb73aed4a150d8db3bcfc795ad9
+Author: Júlio César <julio_splinter@outlook.com>
+Date:   Wed Sep 19 16:42:41 2018 -0300
+
+    Alterado background-image da aba Sobre
+
+commit a445b5521794cd48da967dc5979b91ed07359e07
+Author: Júlio César <julio_splinter@outlook.com>
+Date:   Sat Sep 15 19:29:46 2018 -0300
+
+    Criada pasta relatorios e movidos os relatorios de comandos do git
+
+commit af65f8d4986cd841b71e09156d6453b2a3d00fdd
+Author: Júlio César <julio_splinter@outlook.com>
+Date:   Sat Sep 15 19:08:24 2018 -0300
+
+    Adicionado relatório de progresso do git bash
+
+commit 1476a4ad6387825c8d25e8051b7d66cf3a4ee8f0
+Author: Júlio César <julio_splinter@outlook.com>
+Date:   Sat Sep 15 18:24:24 2018 -0300
+
+    Informações do colaborador Júlio César na página Sobre
+
+commit fe44c958671380925ee9dfb681c1d13cded11be2
+Author: Alexandre Fernandes <alexandre_201@hotmail.com>
+Date:   Sat Sep 15 17:32:46 2018 -0300
+
+    Adicionado arquivo de Relatorio com comandos GIT utilizados
+
+commit 29b951dafdbcc0e925dc350ffd8e81c25d68a058
+Author: Alexandre Fernandes <alexandre_201@hotmail.com>
+Date:   Sat Sep 15 17:26:15 2018 -0300
+
+    Adicionado shortbio na página Sobre, alterado css do conteúdo relacionado e adicionado foto no arquivos de imagens.
+
+commit ce975a795b21eaa1b86385326e3418510ea1e7d7
+Author: Júlio César <julio_splinter@outlook.com>
+Date:   Fri Sep 14 22:38:06 2018 -0300
+
+    Alterado plano de fundo da página Equipe
+:
