@@ -44,18 +44,21 @@ public class Funcionario {
         
         nome = n;
         sobrenome = s;
-        salarioMensal = sal;
+        if(sal<0)
+            salarioMensal = 0;
+        else
+            salarioMensal = sal;
        
     }
     
-    public Funcionario(String s, float sal){
+    public Funcionario(String n, float sal){
         
-        nome = "";
-        sobrenome = s;
-        if(sal>0)
-            salarioMensal = sal;
-        else
+        nome = n;
+        sobrenome = "";
+        if(sal<0)
             salarioMensal = 0;
+        else
+            salarioMensal = sal;
        
     }
     
@@ -63,10 +66,10 @@ public class Funcionario {
         
         nome = "";
         sobrenome = "";
-        if(sal>0)
-            salarioMensal = sal;
-        else
+        if(sal<0)
             salarioMensal = 0;
+        else
+            salarioMensal = sal;
        
     }
     
