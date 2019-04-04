@@ -4,8 +4,8 @@ package Ex2;
 
 public class Pessoa {
 
-    private String nome;
-    private int idade;
+    protected String nome;
+    protected int idade;
     
 
     public String getNome() {
@@ -34,6 +34,13 @@ public class Pessoa {
         nome = n;
         idade = i;
        
+    }
+    
+    //Metodo
+    
+    public void imprimir(){
+    
+        System.out.println("\nNome: "+nome+"\nIdade: "+idade);
     }
     
     
