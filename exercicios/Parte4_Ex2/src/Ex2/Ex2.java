@@ -33,6 +33,9 @@ public class Ex2 {
        
            System.out.println("======");
            p.imprimir();
+           Professor a = (Professor) p;
+           a.aumento();
+
 
        }
     }
